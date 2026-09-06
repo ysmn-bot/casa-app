@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f5f7;
+            color: #222;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .resumen {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 18px;
+            border-radius: 18px;
+        }
+
+        .ruleta {
+            width: 100%;
+            padding: 18px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 18px;
+            font-size: 18px;
+            background: #222;
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 5px;
+        }
+
+        nav button {
+            border: none;
+            background: none;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🏠 CASA</h1>
+        <p>Casa García</p>
+    </header>
+
+    <main>
+
+        <h2>Hola 👋</h2>
+        <p>Esto pasa hoy en tu casa</p>
+
+        <section class="resumen">
+
+            <div class="tarjeta">
+                🧹
+                <h3>Tareas</h3>
+                <p>3 pendientes</p>
+            </div>
+
+            <div class="tarjeta">
+                🛒
+                <h3>Compra</h3>
+                <p>5 productos</p>
+            </div>
+
+            <div class="tarjeta">
+                💰
+                <h3>Gastos</h3>
+                <p>18 € por repartir</p>
+            </div>
+
+            <div class="tarjeta">
+                📝
+                <h3>Avisos</h3>
+                <p>2 nuevos</p>
+            </div>
+
+        </section>
+
+        <button class="ruleta" onclick="girarRuleta()">
+            🎰 GIRAR RULETA
+        </button>
+
+        <h2>Próximo</h2>
+
+        <ul>
+            <li>🧹 Limpiar baño — Alex</li>
+            <li>🛒 Comprar leche</li>
+            <li>🗑️ Sacar basura — mañana</li>
+        </ul>
+
+    </main>
+
+    <nav>
+        <button>🏠<br>Inicio</button>
+        <button>🧹<br>Tareas</button>
+        <button>🛒<br>Compra</button>
+        <button>💰<br>Gastos</button>
+        <button>📝<br>Avisos</button>
+    </nav>
+
+    <script>
+        function girarRuleta() {
+
+            const personas = ["Alex", "Laura", "Marcos"];
+
+            const numero = Math.floor(Math.random() * personas.length);
+
+            alert("🎉 Le toca a " + personas[numero]);
+        }
+    </script>
+
+</body>
+</html>
